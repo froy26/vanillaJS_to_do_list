@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.js"
+			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			crossorigin="anonymous">
+		</script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+		<script src="/js/view.js"></script>
+		<script src="/js/model.js"></script>
+		<script src="/js/controller.js"></script>
+		<script src="/js/index.js"></script>
+
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
+
+		<script>
+			/*$(document).ready(function(){
+				$(".tiles div").on("click", function(event) {
+					$(event.currentTarget).toggleClass("active");
+				});
+			});*/
+
+		</script>
+	</head>
+
+	<body>
+		<section>
+			<header>
+				<h2>To-Do List</h2>
+			</header>
+		</section>
+
+		<section>
+				<div class="task_adder">
+					<input type="text" class="task_name_field"/>
+				</div>
+		</section>
+
+		<section>
+			<div class="task_countainer">
+			</div>
+		</section>
+
+		<section>
+			<input type="button" value="New Task" onclick="AddNewTask()"/>
+			<input type="button" value="Delete All Tasks" onclick="DeleteAllTasks()"/>
+			<input type="button" value="Delete Done Tasks" onclick="DeleteAllDoneTasks()"/>
+		</section>
+
+		<section>
+			<p id='lblRemainingTasks'>0 task left</p>
+		</section>
+	</body>
+</html>
