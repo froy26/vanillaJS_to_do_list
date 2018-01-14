@@ -8,7 +8,7 @@ function CreateTask(_name){
         Name:_name,
         IsDone:false,
 
-        CahngeName: function (_newName) {
+        ChangeName: function (_newName) {
             this.Name = _newName;
         },
         ToggleStatus: function () {
@@ -43,7 +43,7 @@ function AddTaskToList(_taskToAdd){
 function ModifyTaskInList(_taskName, _newTaskName){
     var taskToModify = tasksMap.get(_taskName);
 
-    taskToModify.CahngeName(_newTaskName);
+    taskToModify.ChangeName(_newTaskName);
 }
 
 function ToggleTaskStatusInList(_taskName){
