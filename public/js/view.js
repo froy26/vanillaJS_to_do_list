@@ -1,11 +1,11 @@
 function updateUIWithNewTask(_newTaskName){
 
     var countainer = document.getElementsByClassName('task_countainer');
-    var divToAdd = document.createElement('div');
+    var liToAdd = document.createElement('li');
 	var checkboxToAdd = document.createElement("input");
 	var textboxToAdd = document.createElement("input");
 
-    divToAdd.className = 'UITask';
+    liToAdd.className = 'UITask';
 
     checkboxToAdd.className = 'cbIsDone';
     checkboxToAdd.type = 'checkbox';
@@ -20,9 +20,9 @@ function updateUIWithNewTask(_newTaskName){
     textboxToAdd.onfocus = function() {SaveTaskName(this)};
     textboxToAdd.onblur = function() {ModifyTask()};
 
-    divToAdd.appendChild(checkboxToAdd);
-	divToAdd.appendChild(textboxToAdd);
-    countainer[0].appendChild(divToAdd);
+    liToAdd.appendChild(checkboxToAdd);
+	liToAdd.appendChild(textboxToAdd);
+    countainer[0].appendChild(liToAdd);
 
     document.getElementsByClassName('task_name_field')[0].value = '';
 }
@@ -44,6 +44,8 @@ function DeleteAllTasksFromUI(){
 
     for(i = 0; i < numberOfUITasks; i++){
         UITaskContainer.removeChild(UITasks[0]);
+
+        //Decrement number of task left.
     }
 }
 

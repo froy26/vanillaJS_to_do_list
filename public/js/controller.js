@@ -4,6 +4,7 @@ function AddNewTask(){
 
 	var newTaskName = document.getElementsByClassName('task_name_field')[0].value;
 
+	//Trim the name then check the length.
 	if(newTaskName.length !== 0 && newTaskName[0] !== ' '){
 		var newTask = CreateTask(newTaskName);
 		AddTaskToList(newTask);
